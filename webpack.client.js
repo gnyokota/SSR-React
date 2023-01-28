@@ -1,15 +1,13 @@
 const path = require("path");
 
 module.exports = {
-  //inform webpack that the bundle is for node.js (not for the browser)
-  target: "node",
   mode: "development",
   //tell webpack the root file
-  entry: path.resolve(__dirname, "src/server.js"),
+  entry: path.resolve(__dirname, "src/client/index.js"),
   //tell webpack where to put the bundle
   output: {
-    filename: "server.bundle.js",
-    path: path.resolve(__dirname, "build"),
+    filename: "client.bundle.js",
+    path: path.resolve(__dirname, "public"),
   },
   //tell webpack to run babel
   //react: coverts jsx into normal js
@@ -31,7 +29,7 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ["css-loader"],
+        use: ["style-loader", "css-loader"],
       },
     ],
   },

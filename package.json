@@ -4,8 +4,9 @@
   "description": "Server-side-rendering project",
   "main": "index.js",
   "scripts": {
-    "start:server:dev": "nodemon build/bundle.js",
-    "build:server:dev": "webpack --config webpack.server.js --watch"
+    "start:server:dev": "nodemon build/server.bundle.js",
+    "build:server:dev": "webpack --config webpack.server.js --watch",
+    "build:client:dev": "webpack --config webpack.client.js --watch"
   },
   "repository": {
     "type": "git",
@@ -63,6 +64,8 @@
     "webpack-node-externals": "^3.0.0"
   },
   "devDependencies": {
+    "css-loader": "^6.7.3",
+    "style-loader": "^3.3.1",
     "webpack-cli": "^5.0.1"
   }
 }
