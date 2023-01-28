@@ -13,7 +13,6 @@ module.exports = {
   },
   //tell webpack to run babel
   //react: coverts jsx into normal js
-  //stage-0: handle async code
   //env: meet the requirements (es5) for last 2 browser version
   module: {
     rules: [

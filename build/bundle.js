@@ -31,14 +31,14 @@ eval("\n\n/**\n * Expose `arrayFlatten`.\n */\nmodule.exports = arrayFlatten\n\n
 
 /***/ }),
 
-/***/ "./src/client/component/Home.js":
-/*!**************************************!*\
-  !*** ./src/client/component/Home.js ***!
-  \**************************************/
+/***/ "./src/client/component/Home.jsx":
+/*!***************************************!*\
+  !*** ./src/client/component/Home.jsx ***!
+  \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar Home = function Home() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, \"Home Component\");\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home);\n\n//# sourceURL=webpack://ssr-react/./src/client/component/Home.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar Home = function Home() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h1\", null, \"Hello from Home Component\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"button\", {\n    onClick: function onClick() {\n      return console.log(\"Pressed\");\n    }\n  }, \"Press me!\"));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home);\n\n//# sourceURL=webpack://ssr-react/./src/client/component/Home.jsx?");
 
 /***/ }),
 
@@ -46,9 +46,10 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("var express = __webpack_require__(/*! express */ \"./node_modules/express/index.js\");\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar renderToString = (__webpack_require__(/*! react-dom/server */ \"./node_modules/react-dom/server.node.js\").renderToString);\nvar Home = (__webpack_require__(/*! ./client/component/Home */ \"./src/client/component/Home.js\")[\"default\"]);\nvar app = express();\nvar PORT = 8080;\napp.get(\"/\", function (req, res) {\n  var content = renderToString( /*#__PURE__*/React.createElement(Home, null));\n  res.send(content);\n});\napp.listen(PORT, function () {\n  console.log(\"server listening in port:\".concat(PORT));\n});\n\n//# sourceURL=webpack://ssr-react/./src/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"./node_modules/express/index.js\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom/server */ \"./node_modules/react-dom/server.node.js\");\n/* harmony import */ var _client_component_Home_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./client/component/Home.jsx */ \"./src/client/component/Home.jsx\");\n\n\n\n\nvar app = express__WEBPACK_IMPORTED_MODULE_0___default()();\nvar PORT = 8080;\napp.get(\"/\", function (req, res) {\n  var content = (0,react_dom_server__WEBPACK_IMPORTED_MODULE_2__.renderToString)( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_client_component_Home_jsx__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null));\n  res.send(content);\n});\napp.listen(PORT, function () {\n  console.log(\"server listening in port:\".concat(PORT));\n});\n\n//# sourceURL=webpack://ssr-react/./src/index.js?");
 
 /***/ }),
 
