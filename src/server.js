@@ -13,7 +13,9 @@ app.get("/", (req, res) => {
   const content = renderToString(<Home />);
   const html = `
   <html>
-  <head></head>
+  <head>
+  <link rel="stylesheet" href="styles.css">
+  </head>
   <body>
   <div id="app">${content}</div>
   <script src="client.bundle.js"></script>

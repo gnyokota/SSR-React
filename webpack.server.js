@@ -1,4 +1,5 @@
 const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   //inform webpack that the bundle is for node.js (not for the browser)
@@ -30,9 +31,14 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/i,
-        use: ["css-loader"],
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, {loader: "css-loader"}],
       },
     ],
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "../public/styles.css",
+    }),
+  ],
 };
