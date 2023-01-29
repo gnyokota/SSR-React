@@ -1,7 +1,6 @@
 import express from "express";
-import React from "react";
-import {renderToString} from "react-dom/server";
-import Home from "./client/component/Home.jsx";
+
+import renderer from "./helper/renderer";
 
 const app = express();
 
@@ -10,19 +9,7 @@ app.use(express.static("public"));
 const PORT = 8080;
 
 app.get("/", (req, res) => {
-  const content = renderToString(<Home />);
-  const html = `
-  <html>
-  <head>
-  <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-  <div id="app">${content}</div>
-  <script src="client.bundle.js"></script>
-  </body>
-  </html>
-  `;
-
+  const html = renderer();
   res.send(html);
 });
 

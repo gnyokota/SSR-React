@@ -1,7 +1,8 @@
 const path = require("path");
+const {merge} = require("webpack-merge");
+const commonCongif = require("./webpack.common.js");
 
-module.exports = {
-  mode: "development",
+const clientConfig = {
   //tell webpack the root file
   entry: path.resolve(__dirname, "src/client/index.js"),
   //tell webpack where to put the bundle
@@ -15,22 +16,11 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: [/node_modules/],
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: [
-              "@babel/preset-react",
-              ["@babel/preset-env", {targets: {browsers: ["last 2 versions"]}}],
-            ],
-          },
-        },
-      },
-      {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
     ],
   },
 };
+
+module.exports = merge(commonCongif, clientConfig);

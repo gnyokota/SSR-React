@@ -1,10 +1,12 @@
 const path = require("path");
+const {merge} = require("webpack-merge");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const webpackNodeExternals = require("webpack-node-externals");
+const commonCongif = require("./webpack.common.js");
 
-module.exports = {
+const serverConfig = {
   //inform webpack that the bundle is for node.js (not for the browser)
   target: "node",
-  mode: "development",
   //tell webpack the root file
   entry: path.resolve(__dirname, "src/server.js"),
   //tell webpack where to put the bundle
@@ -18,19 +20,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: [/node_modules/],
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: [
-              "@babel/preset-react",
-              ["@babel/preset-env", {targets: {browsers: ["last 2 versions"]}}],
-            ],
-          },
-        },
-      },
-      {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, {loader: "css-loader"}],
       },
@@ -38,7 +27,11 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "../public/styles.css",
+      filename: "../public/styles.bundle.css",
     }),
   ],
+  //node_modules are not included as part of the bundle
+  externals: [webpackNodeExternals()],
 };
+
+module.exports = merge(commonCongif, serverConfig);
