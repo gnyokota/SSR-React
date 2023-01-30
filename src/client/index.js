@@ -1,8 +1,13 @@
 import React from "react";
 import {createRoot} from "react-dom/client";
+import {BrowserRouter} from "react-router-dom";
 
-import Home from "./component/Home.jsx";
+import Routes from "./RoutesComp.jsx";
 
 const container = document.getElementById("app");
 const root = createRoot(container);
-root.render(<Home />);
+root.render(
+  <BrowserRouter>
+    <RoutesComp />
+  </BrowserRouter>
+);
