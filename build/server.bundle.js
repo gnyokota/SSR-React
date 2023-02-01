@@ -10,6 +10,26 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/client/RoutesComp.jsx":
+/*!***********************************!*\
+  !*** ./src/client/RoutesComp.jsx ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ \"react-router-dom\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _component_About_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component/About.jsx */ \"./src/client/component/About.jsx\");\n/* harmony import */ var _component_Home_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./component/Home.jsx */ \"./src/client/component/Home.jsx\");\n\n\n\n\nvar RoutesComp = function RoutesComp() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Routes, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {\n    exact: true,\n    path: \"/\",\n    element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_Home_jsx__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null)\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {\n    exact: true,\n    path: \"/about\",\n    element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_component_About_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null)\n  }));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RoutesComp);\n\n//# sourceURL=webpack://ssr-react/./src/client/RoutesComp.jsx?");
+
+/***/ }),
+
+/***/ "./src/client/component/About.jsx":
+/*!****************************************!*\
+  !*** ./src/client/component/About.jsx ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar About = function About() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, \"This is the about page\");\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (About);\n\n//# sourceURL=webpack://ssr-react/./src/client/component/About.jsx?");
+
+/***/ }),
+
 /***/ "./src/client/component/Home.jsx":
 /*!***************************************!*\
   !*** ./src/client/component/Home.jsx ***!
@@ -26,7 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/server */ \"react-dom/server\");\n/* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom_server__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _client_component_Home_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../client/component/Home.jsx */ \"./src/client/component/Home.jsx\");\n\n\n\nvar renderer = function renderer() {\n  var content = (0,react_dom_server__WEBPACK_IMPORTED_MODULE_1__.renderToString)( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_client_component_Home_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null));\n  var html = \"\\n  <html>\\n  <head>\\n  <link rel=\\\"stylesheet\\\" href=\\\"styles.bundle.css\\\">\\n  </head>\\n  <body>\\n  <div id=\\\"app\\\">\".concat(content, \"</div>\\n  <script src=\\\"client.bundle.js\\\"></script>\\n  </body>\\n  </html>\\n  \");\n  return html;\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (renderer);\n\n//# sourceURL=webpack://ssr-react/./src/helper/renderer.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/server */ \"react-dom/server\");\n/* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom_server__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react_router_dom_server__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom/server */ \"react-router-dom/server\");\n/* harmony import */ var react_router_dom_server__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_router_dom_server__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _client_RoutesComp_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../client/RoutesComp.jsx */ \"./src/client/RoutesComp.jsx\");\n\n\n\n\nvar renderer = function renderer(req) {\n  var content = react_dom_server__WEBPACK_IMPORTED_MODULE_1__.renderToString( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom_server__WEBPACK_IMPORTED_MODULE_2__.StaticRouter, {\n    location: req.path,\n    context: {}\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_client_RoutesComp_jsx__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null)));\n  var html = \"\\n  <html>\\n  <head>\\n  <link rel=\\\"stylesheet\\\" href=\\\"styles.bundle.css\\\">\\n  </head>\\n  <body>\\n  <div id=\\\"app\\\">\".concat(content, \"</div>\\n  <script src=\\\"client.bundle.js\\\"></script>\\n  </body>\\n  </html>\\n  \");\n  return html;\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (renderer);\n\n//# sourceURL=webpack://ssr-react/./src/helper/renderer.js?");
 
 /***/ }),
 
@@ -36,7 +56,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _helper_renderer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helper/renderer */ \"./src/helper/renderer.js\");\n\n\nvar app = express__WEBPACK_IMPORTED_MODULE_0___default()();\n\n//sets a static folder where server can find the client.bundle.js\napp.use(express__WEBPACK_IMPORTED_MODULE_0___default()[\"static\"](\"public\"));\nvar PORT = 8080;\napp.get(\"/\", function (req, res) {\n  var html = (0,_helper_renderer__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n  res.send(html);\n});\napp.listen(PORT, function () {\n  console.log(\"server listening in port:\".concat(PORT));\n});\n\n//# sourceURL=webpack://ssr-react/./src/server.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _helper_renderer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helper/renderer */ \"./src/helper/renderer.js\");\n\n\nvar app = express__WEBPACK_IMPORTED_MODULE_0___default()();\n\n//sets a static folder where server can find the client.bundle.js\napp.use(express__WEBPACK_IMPORTED_MODULE_0___default()[\"static\"](\"public\"));\nvar PORT = 8080;\napp.get(\"*\", function (req, res) {\n  var html = (0,_helper_renderer__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(req);\n  res.send(html);\n});\napp.listen(PORT, function () {\n  console.log(\"server listening in port:\".concat(PORT));\n});\n\n//# sourceURL=webpack://ssr-react/./src/server.js?");
 
 /***/ }),
 
@@ -77,6 +97,26 @@ module.exports = require("react");
 /***/ ((module) => {
 
 module.exports = require("react-dom/server");
+
+/***/ }),
+
+/***/ "react-router-dom":
+/*!***********************************!*\
+  !*** external "react-router-dom" ***!
+  \***********************************/
+/***/ ((module) => {
+
+module.exports = require("react-router-dom");
+
+/***/ }),
+
+/***/ "react-router-dom/server":
+/*!******************************************!*\
+  !*** external "react-router-dom/server" ***!
+  \******************************************/
+/***/ ((module) => {
+
+module.exports = require("react-router-dom/server");
 
 /***/ })
 

@@ -8,8 +8,8 @@ const app = express();
 app.use(express.static("public"));
 const PORT = 8080;
 
-app.get("/", (req, res) => {
-  const html = renderer();
+app.get("*", (req, res) => {
+  const html = renderer(req);
   res.send(html);
 });
 
