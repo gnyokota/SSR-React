@@ -7,7 +7,7 @@ import Home from "./component/Home.jsx";
 const RoutesComp = () => {
   return (
     <Routes>
-      <Route exact path="/" element={<Home />} />
+      <Route exact path="/" element={<Home username="Anna" />} />
       <Route exact path="/about" element={<About />} />
     </Routes>
   );

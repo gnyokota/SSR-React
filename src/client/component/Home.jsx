@@ -2,10 +2,10 @@ import React from "react";
 
 import "./Home.css";
 
-const Home = () => {
+const Home = ({username}) => {
   return (
     <div>
-      <h1 className="home-title">Hello from Home Component</h1>
+      <h1 className="home-title">Hello, {username} from Home Component</h1>
       <button onClick={() => console.log("Pressed")}>Press me!</button>
     </div>
   );
