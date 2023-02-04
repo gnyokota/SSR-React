@@ -1,19 +1,22 @@
-const {CleanWebpackPlugin} = require("clean-webpack-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
-  target: "node",
-  mode: "development",
+  target: 'node',
+  mode: 'development',
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: [/node_modules/],
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
             presets: [
-              "@babel/preset-react",
-              ["@babel/preset-env", {targets: {browsers: ["last 2 versions"]}}],
+              '@babel/preset-react',
+              [
+                '@babel/preset-env',
+                { targets: { browsers: ['last 2 versions'] } },
+              ],
             ],
           },
         },
@@ -21,4 +24,4 @@ module.exports = {
     ],
   },
   plugins: [new CleanWebpackPlugin()],
-};
+}
