@@ -1,16 +1,13 @@
 import React from 'react'
 import * as ReactDOMServer from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom/server'
-import { Provider } from 'react-redux'
 import RoutesComp from '../client/RoutesComp.jsx'
 
-const renderer = (req, store) => {
+const renderer = (req) => {
   const content = ReactDOMServer.renderToString(
-    <Provider store={store}>
-      <StaticRouter location={req.path} context={{}}>
-        <RoutesComp />
-      </StaticRouter>
-    </Provider>,
+    <StaticRouter location={req.path} context={{}}>
+      <RoutesComp />
+    </StaticRouter>,
   )
 
   const html = `

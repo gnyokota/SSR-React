@@ -8,7 +8,7 @@ const RoutesComp = () => {
   return (
     <Routes>
       <Route exact path="/" element={<Home />} />
-      <Route exact path="/about" element={<UserList />} />
+      <Route exact path="/users" element={<UserList />} />
     </Routes>
   )
 }

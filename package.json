@@ -40,7 +40,6 @@
     "@babel/plugin-syntax-import-meta": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.18.6",
-    "axios": "^1.2.4",
     "babel-loader": "^9.1.2",
     "babel-preset-es2015": "^6.24.1",
     "clean-webpack-plugin": "^4.0.0",

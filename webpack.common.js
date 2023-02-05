@@ -1,7 +1,6 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
-  target: 'node',
   mode: 'development',
   module: {
     rules: [
