@@ -17,7 +17,7 @@ const renderer = (req, store) => {
   <html>
   <head>
   <link rel="stylesheet" href="styles.bundle.css">
-  <link rel="icon" type="image/x-icon" href="../client/favicon.png">
+  <link rel="icon" type="image/x-icon" href="favicon.png">
   </head>
   <body>
   <div id="app">${content}</div>

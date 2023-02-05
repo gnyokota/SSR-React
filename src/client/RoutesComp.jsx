@@ -1,16 +1,16 @@
-import React from "react";
-import {Route, Routes} from "react-router-dom";
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
 
-import About from "./component/About.jsx";
-import Home from "./component/Home.jsx";
+import UserList from './component/UserList.jsx'
+import Home from './component/Home.jsx'
 
 const RoutesComp = () => {
   return (
     <Routes>
-      <Route exact path="/" element={<Home username="Anna" />} />
-      <Route exact path="/about" element={<About />} />
+      <Route exact path="/" element={<Home />} />
+      <Route exact path="/about" element={<UserList />} />
     </Routes>
-  );
-};
+  )
+}
 
-export default RoutesComp;
+export default RoutesComp
