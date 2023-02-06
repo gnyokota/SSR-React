@@ -5,7 +5,7 @@ const UserList = () => {
 
   useEffect(() => {
     const fetchUsers = async () => {
-      const res = await fetch('https://jsonplaceholder.typicode.com/users')
+      const res = await fetch('http://react-ssr-api.herokuapp.com/users')
       const usersList = await res.json()
       setUsers(usersList)
     }
@@ -22,10 +22,6 @@ const UserList = () => {
       ))}
     </div>
   )
-}
-
-const mapStateToProps = (state) => {
-  users: state.users
 }
 
 export default UserList
