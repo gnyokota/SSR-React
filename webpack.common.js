@@ -10,13 +10,8 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [
-              '@babel/preset-react',
-              [
-                '@babel/preset-env',
-                { targets: { browsers: ['last 2 versions'] } },
-              ],
-            ],
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+            plugins: ['@babel/transform-runtime'],
           },
         },
       },

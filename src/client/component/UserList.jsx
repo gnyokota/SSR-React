@@ -2,13 +2,16 @@ import React, { useEffect, useState } from 'react'
 
 const UserList = () => {
   const [users, setUsers] = useState([])
+
   useEffect(() => {
-    fetch('http://react-ssr-api.herokuapp.com/users')
-      .then((res) => res.json())
-      .then((data) => setUsers(data))
+    const fetchUsers = async () => {
+      const res = await fetch('https://jsonplaceholder.typicode.com/users')
+      const usersList = await res.json()
+      setUsers(usersList)
+    }
+    fetchUsers()
   }, [])
 
-  console.log({ users })
   return (
     <div>
       <h1>Here is a list of users:</h1>

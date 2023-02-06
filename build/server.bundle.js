@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\nfunction _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }\nfunction _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : \"undefined\" != typeof Symbol && arr[Symbol.iterator] || arr[\"@@iterator\"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }\nfunction _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }\n\nvar UserList = function UserList() {\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),\n    _useState2 = _slicedToArray(_useState, 2),\n    users = _useState2[0],\n    setUsers = _useState2[1];\n  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {\n    fetch('http://react-ssr-api.herokuapp.com/users').then(function (res) {\n      return res.json();\n    }).then(function (data) {\n      return setUsers(data);\n    });\n  }, []);\n  console.log({\n    users: users\n  });\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h1\", null, \"Here is a list of users:\"), users.map(function (user) {\n    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n      key: user.id\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h2\", null, user.name));\n  }));\n};\nvar mapStateToProps = function mapStateToProps(state) {\n  users: state.users;\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (UserList);\n\n//# sourceURL=webpack://ssr-react/./src/client/component/UserList.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ \"@babel/runtime/helpers/asyncToGenerator\");\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ \"@babel/runtime/helpers/slicedToArray\");\n/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"@babel/runtime/regenerator\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\nvar UserList = function UserList() {\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)([]),\n    _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default()(_useState, 2),\n    users = _useState2[0],\n    setUsers = _useState2[1];\n  (0,react__WEBPACK_IMPORTED_MODULE_3__.useEffect)(function () {\n    var fetchUsers = /*#__PURE__*/function () {\n      var _ref = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().mark(function _callee() {\n        var res, usersList;\n        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().wrap(function _callee$(_context) {\n          while (1) switch (_context.prev = _context.next) {\n            case 0:\n              _context.next = 2;\n              return fetch('https://jsonplaceholder.typicode.com/users');\n            case 2:\n              res = _context.sent;\n              _context.next = 5;\n              return res.json();\n            case 5:\n              usersList = _context.sent;\n              setUsers(usersList);\n            case 7:\n            case \"end\":\n              return _context.stop();\n          }\n        }, _callee);\n      }));\n      return function fetchUsers() {\n        return _ref.apply(this, arguments);\n      };\n    }();\n    fetchUsers();\n  }, []);\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default().createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default().createElement(\"h1\", null, \"Here is a list of users:\"), users.map(function (user) {\n    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default().createElement(\"div\", {\n      key: user.id\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default().createElement(\"h2\", null, user.name));\n  }));\n};\nvar mapStateToProps = function mapStateToProps(state) {\n  users: state.users;\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (UserList);\n\n//# sourceURL=webpack://ssr-react/./src/client/component/UserList.jsx?");
 
 /***/ }),
 
@@ -56,7 +56,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _helper_renderer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helper/renderer */ \"./src/helper/renderer.js\");\n\n\nvar app = express__WEBPACK_IMPORTED_MODULE_0___default()();\n\n//sets a static folder where server can find the client.bundle.js\napp.use(express__WEBPACK_IMPORTED_MODULE_0___default()[\"static\"]('public'));\nvar PORT = 8080;\napp.get('*', function (req, res) {\n  var html = (0,_helper_renderer__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(req);\n  res.send(html);\n});\napp.listen(PORT, function () {\n  console.log(\"server listening in port:\".concat(PORT));\n});\n\n//# sourceURL=webpack://ssr-react/./src/server.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var babel_polyfill__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! babel-polyfill */ \"babel-polyfill\");\n/* harmony import */ var babel_polyfill__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(babel_polyfill__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _helper_renderer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./helper/renderer */ \"./src/helper/renderer.js\");\n\n\n\nvar app = express__WEBPACK_IMPORTED_MODULE_1___default()();\n\n//sets a static folder where server can find the client.bundle.js\napp.use(express__WEBPACK_IMPORTED_MODULE_1___default()[\"static\"]('public'));\nvar PORT = 8080;\napp.get('*', function (req, res) {\n  var html = (0,_helper_renderer__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(req);\n  res.send(html);\n});\napp.listen(PORT, function () {\n  console.log(\"server listening in port:\".concat(PORT));\n});\n\n//# sourceURL=webpack://ssr-react/./src/server.js?");
 
 /***/ }),
 
@@ -67,6 +67,46 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var expr
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://ssr-react/./src/client/component/Home.css?");
+
+/***/ }),
+
+/***/ "@babel/runtime/helpers/asyncToGenerator":
+/*!**********************************************************!*\
+  !*** external "@babel/runtime/helpers/asyncToGenerator" ***!
+  \**********************************************************/
+/***/ ((module) => {
+
+module.exports = require("@babel/runtime/helpers/asyncToGenerator");
+
+/***/ }),
+
+/***/ "@babel/runtime/helpers/slicedToArray":
+/*!*******************************************************!*\
+  !*** external "@babel/runtime/helpers/slicedToArray" ***!
+  \*******************************************************/
+/***/ ((module) => {
+
+module.exports = require("@babel/runtime/helpers/slicedToArray");
+
+/***/ }),
+
+/***/ "@babel/runtime/regenerator":
+/*!*********************************************!*\
+  !*** external "@babel/runtime/regenerator" ***!
+  \*********************************************/
+/***/ ((module) => {
+
+module.exports = require("@babel/runtime/regenerator");
+
+/***/ }),
+
+/***/ "babel-polyfill":
+/*!*********************************!*\
+  !*** external "babel-polyfill" ***!
+  \*********************************/
+/***/ ((module) => {
+
+module.exports = require("babel-polyfill");
 
 /***/ }),
 

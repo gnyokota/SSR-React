@@ -3,6 +3,7 @@ const { merge } = require('webpack-merge')
 const commonCongif = require('./webpack.common.js')
 
 const clientConfig = {
+  target: ['web', 'es5'],
   //tell webpack the root file
   entry: path.resolve(__dirname, 'src/client/index.js'),
   //tell webpack where to put the bundle
