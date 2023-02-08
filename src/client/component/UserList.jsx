@@ -1,21 +1,23 @@
 import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchUser } from '../../action/actions'
 
 const UserList = () => {
-  const [users, setUsers] = useState([])
+  const dispatch = useDispatch()
 
   useEffect(() => {
     const fetchUsers = async () => {
-      const res = await fetch('http://react-ssr-api.herokuapp.com/users')
-      const usersList = await res.json()
-      setUsers(usersList)
+      dispatch(fetchUser())
     }
     fetchUsers()
   }, [])
 
+  const usersList = useSelector((state) => state.users.data)
+
   return (
     <div>
       <h1>Here is a list of users:</h1>
-      {users.map((user) => (
+      {usersList.map((user) => (
         <div key={user.id}>
           <h2>{user.name}</h2>
         </div>

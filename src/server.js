@@ -2,6 +2,7 @@ import 'babel-polyfill'
 import express from 'express'
 
 import renderer from './helper/renderer'
+import store from './store/store'
 
 const app = express()
 
@@ -10,7 +11,7 @@ app.use(express.static('public'))
 const PORT = 8080
 
 app.get('*', (req, res) => {
-  const html = renderer(req)
+  const html = renderer(req, store)
   res.send(html)
 })
 
