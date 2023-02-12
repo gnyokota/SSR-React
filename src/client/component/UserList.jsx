@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchUser } from '../../action/actions'
+import HelmetTags from './HelmetTags.jsx'
 
 const UserList = () => {
   const dispatch = useDispatch()
@@ -16,6 +17,7 @@ const UserList = () => {
 
   return (
     <div>
+      <HelmetTags title="SSR users list" />
       <h1>Here is a list of users:</h1>
       {usersList.map((user) => (
         <div key={user.id}>
